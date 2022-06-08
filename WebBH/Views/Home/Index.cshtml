@@ -1,31 +1,369 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="clearfix">
+    <!--Sidebar trái-->
+    <!--post full page ?-->
+
+    <aside id="sidebar-l" class="sidebar-l col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+        <figure class="widget shadow r_corners visible-overflow m_bottom_5">
+            <!-- <figure class="widget shadow r_corners visible-overflow m_bottom_5">  -->
+            <figcaption class="box_title_cate box_title_cate_b">
+                Sản phẩm
+            </figcaption>
+            <div class="widget_content widget_product">
+                <!--category-widget-->
+                <div class="category">
+                    <ul class="list-unstyled">
+                        <li>
+                            <div class="dropdown">
+                                <a href="danh-muc/danh-muc-san-pham-1.html" class="btn btn-default">
+                                    Danh mục sản phẩm 1
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a href="danh-muc/danh-muc-san-pham-2.html" class="btn btn-default">
+                                    Danh mục sản phẩm 2
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a href="danh-muc/danh-muc-san-pham-3.html" class="btn btn-default">
+                                    Danh mục sản phẩm 3
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a href="danh-muc/danh-muc-san-pham-4.html" class="btn btn-default">
+                                    Danh mục sản phẩm 4
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a href="danh-muc/danh-muc-san-pham-4-1.html" class="btn btn-default">
+                                    Danh mục sản phẩm 4
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- ./category-widget -->
+            </div>
+        </figure>
+        <figure class="widget shadow r_corners wrapper m_bottom_5 productincatelogy" id="productincatelogy">
+            <figcaption class="box_title_cate" style="margin-bottom: 0px;">
+                Sản phẩm nổi bật
+            </figcaption>
+            <div class="widget_content">
+                <div class="clearfix m_bottom_15">
+                    <a href="san-pham/ban-acc-lien-quan-gia-500k.html">
+                        <img data-original='https://weblienquan.jweb.vn/~/images/uploads/weblienquan/images/maxresdefault.jpg' class='f_left m_right_15 m_sm_bottom_10 f_sm_none f_xs_left m_xs_bottom_0 lazyloading' style='float: left;padding-right: 10px;' />
+                    </a>
+                    <a href="san-pham/ban-acc-lien-quan-gia-500k.html" class="bold_title color_dark d_block bt_link">Bán acc liên quân giá 500k</a>
+
+                    <p class="scheme_color"><b>Giá: Liên hệ</b></p>
+
+
+                </div>
+                <hr class="m_bottom_15">
+                <div class="clearfix m_bottom_15">
+                    <a href="san-pham/ban-acc-lien-quan-bac-cao-thu.html">
+                        <img data-original='https://weblienquan.jweb.vn/~/images/uploads/weblienquan/images/lienquan9-min.png' class='f_left m_right_15 m_sm_bottom_10 f_sm_none f_xs_left m_xs_bottom_0 lazyloading' style='float: left;padding-right: 10px;' />
+                    </a>
+                    <a href="san-pham/ban-acc-lien-quan-bac-cao-thu.html" class="bold_title color_dark d_block bt_link">Bán acc liên quân bậc cao thủ</a>
+
+                    <p><s>1.500.000đ</s></p>
+                    <p class="scheme_color"><b>1.000.000đ</b></p>
+
+
+                </div>
+                <hr class="m_bottom_15">
+                <div class="clearfix m_bottom_15">
+                    <a href="san-pham/ban-acc-lien-quan-bac-kim-cuong.html">
+                        <img data-original='https://weblienquan.jweb.vn/~/images/uploads/weblienquan/images/FB_IMG_15211782963707316.jpg' class='f_left m_right_15 m_sm_bottom_10 f_sm_none f_xs_left m_xs_bottom_0 lazyloading' style='float: left;padding-right: 10px;' />
+                    </a>
+                    <a href="san-pham/ban-acc-lien-quan-bac-kim-cuong.html" class="bold_title color_dark d_block bt_link">Bán acc liên quân bậc kim cương</a>
+
+                    <p><s>2.000.000đ</s></p>
+                    <p class="scheme_color"><b>1.500.000đ</b></p>
+
+
+                </div>
+                <hr class="m_bottom_15">
+                <div class="clearfix m_bottom_15">
+                    <a href="san-pham/ban-acc-lien-quan-gia-1k-1000.html">
+                        <img data-original='https://weblienquan.jweb.vn/~/images/uploads/weblienquan/images/tai_xuang.jpg' class='f_left m_right_15 m_sm_bottom_10 f_sm_none f_xs_left m_xs_bottom_0 lazyloading' style='float: left;padding-right: 10px;' />
+                    </a>
+                    <a href="san-pham/ban-acc-lien-quan-gia-1k-1000.html" class="bold_title color_dark d_block bt_link">Bán acc liên quân giá 1k (1000)</a>
+
+                    <p><s>5.000đ</s></p>
+                    <p class="scheme_color"><b>1.000đ</b></p>
+
+
+                </div>
+
+            </div>
+
+        </figure><figure class="tracking-order widget shadow r_corners wrapper m_bottom_5">
+            <figcaption class="box_title_cate" style="margin-bottom:0px">
+                Kiểm tra đơn hàng
+            </figcaption>
+            <div class="widget_content">
+                <div class="wrap-tracking">
+                    <form action="https://weblienquan.jweb.vn/kiem-tra-don-hang.html" method="get">
+                        <div class="form-group">
+                            <input type="text" name="code" required class="form-control" placeholder="Mã đơn hàng">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-success button-tracking-order" value="Kiểm tra">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </figure><div class="fb-page"
+                      data-href="https://www.facebook.com/jwebvn"
+                      data-width="380"
+                      data-hide-cover="false"
+                      data-show-facepile="false"
+                      data-show-posts="false"></div>
+    </aside>
+    <!--Kết thúc sidebar trái-->
+    <!--end check full page post-->
+    <!--Nội dung giữa-->
+
+    <section class="content_center shadow col-lg-9 col-md-9 col-sm-9 initial-position">
+
+        <!--ads free plan-->
+        <!-- <a target="_blank" href="https://jweb.vn/?utm_source=banner-free&utm_campaign=freewebsite"><img class="not_mobile" style="margin-bottom: 10px;" src="/images/banner-user-free.jpg" width="100%" /></a> -->
+        <!--end ads free plan-->
+        <section>
+        </section>
+
+        <div class="clearfix m_bottom_50">
+
+
+            <div class="flexslider long">
+
+                <ul class="slides">
+
+                    <li>
+                        <img src="~/images/uploads/thietbiso1/images/86422128882slider-1.png" alt="" />
+                        <section class="slide_caption_2 t_align_c d_xs_none">
+                        </section>
+
+                    </li>
+
+                    <li>
+
+                        <img src="~/images/uploads/thietbiso1/images/49052424030slider-2.png" alt="">
+
+                        <section class="slide_caption_2 t_align_c d_xs_none">
+                        </section>
+
+                    </li>
+
+                </ul>
+
+            </div>
+            <section class="row products_container category_grid clearfix m_bottom_15 productsincatelogy_6">
+                <div class="">
+                    <!--product item-->
+                    <div class="product_item hit ">
+
+                        <figure class="r_corners photoframe type_2 t_align_c tr_all_hover shadow relative">
+
+                            <a href="san-pham/ban-acc-lien-quan-gia-500k.html" class="d_block relative wrapper pp_wrap m_bottom_15">
+                                <center>
+                                    <img src="~/images/uploads/weblienquan/images/maxresdefault.jpg" class="tr_all_hover" alt="Bán acc liên quân giá 500k" title="Bán acc liên quân giá 500k">
+                                </center>
+                            </a>
+                            <figcaption>
+
+                                <h5><a href="san-pham/ban-acc-lien-quan-gia-500k.html">Bán acc liên quân giá 500k</a></h5>
+
+                                <p class="scheme_color f_size_large m_bottom_5">
+
+                                    <span style="font-weight: bold;">Giá: Liên hệ</span>
+
+                                </p>
+                                <div class="j_button_cart add_to_cart_button">
+                                    <button data-price="500000" data-id="292256" data-img="https://weblienquan.jweb.vn/~/images/uploads/weblienquan/images/maxresdefault.jpg" data-name="Bán acc liên quân giá 500k" class="add_to_cart button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Chọn mua</button>
+                                </div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+                    <!--product item-->
+                    <div class="product_item hit ">
+
+                        <figure class="r_corners photoframe type_2 t_align_c tr_all_hover shadow relative">
+
+                            <a href="san-pham/ban-acc-lien-quan-bac-cao-thu.html" class="d_block relative wrapper pp_wrap m_bottom_15">
+                                <center>
+                                    <img src="~/images/uploads/weblienquan/images/lienquan9-min.png" class="tr_all_hover" alt="Bán acc liên quân bậc cao thủ" title="Bán acc liên quân bậc cao thủ">
+
+                                </center>
+                            </a>
+                            <figcaption>
+
+                                <h5><a href="san-pham/ban-acc-lien-quan-bac-cao-thu.html">Bán acc liên quân bậc cao thủ</a></h5>
+
+                                <p class="scheme_color f_size_large m_bottom_5">
+                                    <s>1.500.000đ</s>
+                                    <span style="font-weight: bold;">1.000.000đ</span>
+
+
+                                </p>
+                                <div class="j_button_cart add_to_cart_button">
+                                    <button data-price="1000000" data-id="292255" data-img="https://weblienquan.jweb.vn/~/images/uploads/weblienquan/images/lienquan9-min.png" data-name="Bán acc liên quân bậc cao thủ" class="add_to_cart button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Chọn mua</button>
+                                </div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+                    <!--product item-->
+                    <div class="product_item hit ">
+
+                        <figure class="r_corners photoframe type_2 t_align_c tr_all_hover shadow relative">
+
+                            <a href="san-pham/ban-acc-lien-quan-bac-kim-cuong.html" class="d_block relative wrapper pp_wrap m_bottom_15">
+                                <center>
+                                    <img src="~/images/uploads/weblienquan/images/FB_IMG_15211782963707316.jpg" class="tr_all_hover" alt="Bán acc liên quân bậc kim cương" title="Bán acc liên quân bậc kim cương">
+
+                                </center>
+                            </a>
+                            <figcaption>
+
+                                <h5><a href="san-pham/ban-acc-lien-quan-bac-kim-cuong.html">Bán acc liên quân bậc kim cương</a></h5>
+
+                                <p class="scheme_color f_size_large m_bottom_5">
+                                    <s>2.000.000đ</s>
+                                    <span style="font-weight: bold;">1.500.000đ</span>
+
+
+                                </p>
+                                <div class="j_button_cart add_to_cart_button">
+                                    <button data-price="1500000" data-id="292254" data-img="https://weblienquan.jweb.vn/~/images/uploads/weblienquan/images/FB_IMG_15211782963707316.jpg" data-name="Bán acc liên quân bậc kim cương" class="add_to_cart button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Chọn mua</button>
+                                </div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+                    <!--product item-->
+                    <div class="product_item hit ">
+
+                        <figure class="r_corners photoframe type_2 t_align_c tr_all_hover shadow relative">
+
+                            <a href="san-pham/ban-acc-lien-quan-gia-1k-1000.html" class="d_block relative wrapper pp_wrap m_bottom_15">
+                                <center>
+                                    <img src="~/images/uploads/weblienquan/images/tai_xuang.jpg" class="tr_all_hover" alt="Bán acc liên quân giá 1k (1000)" title="Bán acc liên quân giá 1k (1000)">
+
+                                </center>
+                            </a>
+                            <figcaption>
+
+                                <h5><a href="san-pham/ban-acc-lien-quan-gia-1k-1000.html">Bán acc liên quân giá 1k (1000)</a></h5>
+
+                                <p class="scheme_color f_size_large m_bottom_5">
+                                    <s>5.000đ</s>
+                                    <span style="font-weight: bold;">1.000đ</span>
+
+
+                                </p>
+                                <div class="j_button_cart add_to_cart_button">
+                                    <button data-price="1000" data-id="292253" data-img="https://weblienquan.jweb.vn/~/images/uploads/weblienquan/images/tai_xuang.jpg" data-name="Bán acc liên quân giá 1k (1000)" class="add_to_cart button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Chọn mua</button>
+                                </div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+                    <!--product item-->
+                    <div class="product_item hit ">
+
+                        <figure class="r_corners photoframe type_2 t_align_c tr_all_hover shadow relative">
+
+                            <a href="san-pham/ban-acc-lien-quan-rank-vang.html" class="d_block relative wrapper pp_wrap m_bottom_15">
+                                <center>
+                                    <img src="~/images/uploads/weblienquan/images/388831492689788.jpg" class="tr_all_hover" alt="Bán acc liên quân rank vàng" title="Bán acc liên quân rank vàng">
+
+                                </center>
+                            </a>
+                            <figcaption>
+
+                                <h5><a href="san-pham/ban-acc-lien-quan-rank-vang.html">Bán acc liên quân rank vàng</a></h5>
+
+                                <p class="scheme_color f_size_large m_bottom_5">
+                                    <s>100.000đ</s>
+                                    <span style="font-weight: bold;">70.000đ</span>
+
+
+                                </p>
+                                <div class="j_button_cart add_to_cart_button">
+                                    <button data-price="70000" data-id="292252" data-img="https://weblienquan.jweb.vn/~/images/uploads/weblienquan/images/388831492689788.jpg" data-name="Bán acc liên quân rank vàng" class="add_to_cart button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Chọn mua</button>
+                                </div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+                    <!--product item-->
+                    <div class="product_item hit ">
+
+                        <figure class="r_corners photoframe type_2 t_align_c tr_all_hover shadow relative">
+
+                            <a href="san-pham/ban-acc-lien-quan-rank-bach-kim.html" class="d_block relative wrapper pp_wrap m_bottom_15">
+                                <center>
+                                    <img src="~/images/uploads/weblienquan/images/LQMB1001_-_acc_lien_quan_-_nick_lien_quan_-CN_-DN.jpg" class="tr_all_hover" alt="Bán acc liên quân rank bạch kim" title="Bán acc liên quân rank bạch kim">
+
+                                </center>
+                            </a>
+                            <figcaption>
+
+                                <h5><a href="san-pham/ban-acc-lien-quan-rank-bach-kim.html">Bán acc liên quân rank bạch kim</a></h5>
+
+                                <p class="scheme_color f_size_large m_bottom_5">
+                                    <s>150.000đ</s>
+                                    <span style="font-weight: bold;">100.000đ</span>
+
+
+                                </p>
+                                <div class="j_button_cart add_to_cart_button">
+                                    <button data-price="100000" data-id="292251" data-img="https://weblienquan.jweb.vn/~/images/uploads/weblienquan/images/LQMB1001_-_acc_lien_quan_-_nick_lien_quan_-CN_-DN.jpg" data-name="Bán acc liên quân rank bạch kim" class="add_to_cart button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0 m_bottom_15">Chọn mua</button>
+                                </div>
+
+                            </figcaption>
+
+                        </figure>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!--Kết thúc nội dung giữa-->
+
+
+    </section>
+    <!--post full page ?-->
+    <!--end check full page post-->
+
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>

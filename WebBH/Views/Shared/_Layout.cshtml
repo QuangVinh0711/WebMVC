@@ -1,42 +1,554 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html lang="vi">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <base />
+    <title>Chào mừng bạn đến với mẫu website Điện thoại 2e</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!--meta info-->
+    <meta name="description" content="Điện thoại Smartphone chính hãng giá luôn tốt nhất mua hàng cùng nhiều phần quà giá trị tại hệ thống Thiết bị số.">
+    <link rel="icon" type="image/ico" href="images/favicon.png">
+    <!-- social -->
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="index.html" />
+    <link rel="canonical" href="index.html" />
+    <meta property="og:title" content="Chào mừng bạn đến với mẫu website Điện thoại 2" />
+    <meta property="og:description" content="Điện thoại Smartphone chính hãng giá luôn tốt nhất mua hàng cùng nhiều phần quà giá trị tại hệ thống Thiết bị số." />
+
+    <script src="~/Scripts/jquery-2.1.0.min.js"></script>
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/flexslider.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" media="all" href="~/Content/owl.transitions.css">
+    <link rel="stylesheet" media="(min-width: 640px)" href="~/Content/style.css">
+    <link rel="stylesheet" media="(max-width: 640px)" href="~/Content/style_mobile.min.css">
+    <!--<link rel="stylesheet" href="sidr/stylesheets/jquery.sidr.dark.css">-->
+    <!--font include-->
+
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet">
+    <script src="~/Scripts/modernizr.js"></script>
+    <!-- <script type="text/javascript" src="~/Scripts/date_time.js"></script> -->
+    <script src="~/Scripts/owl.carousel.min.js"></script>
+
+
+    <!-- lazyload -->
+    <!-- <script type="text/javascript" src="/template/lazyload/lazyload.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var myLazyLoad = new LazyLoad({
+                elements_selector: ".lazyloading",
+            });
+        })
+    </script> -->
+    <!-- ./lazyload -->
+
+    <link href="~/Content/jquery.mobilemenu.css" type="text/css" rel="stylesheet" />
+    <script>var id_store = 42515</script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div id="fb-root"></div>
+    <div class="global-overlay" style="display: none;"></div>
+
+    <!-- <script> -->
+    <!-- window.fbAsyncInit = function() { -->
+    <!-- FB.init({ -->
+    <!-- appId      : '971887739547167', -->
+    <!-- xfbml      : true, -->
+    <!-- version    : 'v2.8' -->
+    <!-- }); -->
+    <!-- }; -->
+    <!-- (function(d, s, id){ -->
+    <!-- var js, fjs = d.getElementsByTagName(s)[0]; -->
+    <!-- if (d.getElementById(id)) {return;} -->
+    <!-- js = d.createElement(s); js.id = id; -->
+    <!-- js.src = "plugins//sdk.js"; -->
+    <!-- fjs.parentNode.insertBefore(js, fjs); -->
+    <!-- }(document, 'script', 'facebook-jssdk')); -->
+    <!-- </script> -->
+
+    <div class="wide_layout relative w_xs_auto">
+        <div class="content_wrap" id="h_1">
+            <header role="banner">
+                <section class="h_top_part content top_nav">
+                    <div class="container">
+                        <div class="row clearfix">
+                            <div class="col-lg-4 col-md-4 col-sm-5 t_xs_align_c">
+                                <p><span id="date_time"></span> </p>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-2 t_align_c t_xs_align_c">
+                            </div>
+                            <nav class="col-lg-4 col-md-4 col-sm-5 t_align_r t_xs_align_c">
+                                <ul class="d_inline_b horizontal_list clearfix f_size_small users_nav">
+                                    <li><a href="https://taikhoan.jweb.vn/" class="default_t_color">Đăng nhập</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+                <!--button for responsive menu-->
+                <div id="mobile-header">
+
+                    <button id="menu_button_mobile" class="menu_button_mobile">
+
+                        <span class="centered_db r_corners">
+                        </span>
+
+                        <span class="centered_db r_corners">
+                        </span>
+
+                        <span class="centered_db r_corners">
+                        </span>
+                        <span class="centered_db r_corners">
+                        </span>
+
+                    </button>
+                    <div class="mobile-logo">
+                        <a href="index.html" class="logo d_xs_inline_b">
+                            <img style="" class="logo-site" src="~/images/uploads/thietbiso1/images/69063555216thietbiso_1_logo.png" title="Trang chủ" />
+                        </a>
+                    </div>
+
+                </div>
+                <section class="h_bot_part content hidden-sm hidden-xs">
+                    <div class="container header_3">
+                        <div class="col-md-4 hidden-sm hidden-xs">
+                            <div class="head-search">
+                                <form method="get" class="ajax-search-form" action="https://weblienquan.jweb.vn/timkiem.html">
+                                    <input class="ajax-search-input" type="text" placeholder="Nhập từ khóa cần tìm" name="s">
+                                    <button class="ajax-search-submit" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <div class="logo text-center">
+                                <a href="index.html"><img class="logo-site" src="~/images/uploads/thietbiso1/images/69063555216thietbiso_1_logo.png" title="Trang chủ" /></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12">
+                            <div class="header-tools text-right">
+                                <ul>
+                                    <li class="contact-area  hc-dark hidden-sm hidden-xs csd-dark">
+                                        <!-- Contact Section -->
+
+                                        <div class="contact-info">
+                                            <div class="inside-content">
+                                                <i class="fa fa-clock-o"></i>
+
+                                                <span class="contact-info-title">
+
+                                                    <span class="contact-info-subtitle">Hỗ trợ khách hàng</span>
+                                                    19008197
+                                                </span>
+
+
+                                            </div>
+                                        </div>
+
+                                    </li>
+
+                                    <!-- Shop Section -->
+                                    <!--shopping cart-->
+
+                                    <li class="m_left_5 relative container3d" id="shopping_button">
+
+                                        <a role="button" href="#" id="shop_icon" class="button_type_3 color_light bg_scheme_color d_block r_corners tr_delay_hover box_s_none">
+
+                                            <span class="d_inline_middle">
+
+                                                <i class="fa fa-shopping-cart">
+                                                </i>
+
+                                                <span class="count tr_delay_hover type_2 circle t_align_c">
+                                                    0
+                                                </span>
+
+                                            </span>
+
+                                        </a>
+
+                                        <div class="shopping_cart top_arrow tr_all_hover r_corners">
+                                            <div class="f_size_medium sc_header">
+                                                Giỏ hàng của bạn
+                                            </div>
+
+                                            <ul class="products_list" id="products_list">
+                                            </ul>
+                                            <div class="sc_footer t_align_c">
+
+                                                <a href="gio-hang.html" role="button" class="button_type_4 d_inline_middle bg_light_color_2 r_corners color_dark t_align_c tr_all_hover m_mxs_bottom_5">
+                                                    Xem giỏ và Đặt hàng
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!--sang test menu-->
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $(window).scroll(function () {
+                            var height = $(this).scrollTop();
+                            if (height > 270) {
+                                $("#menu_fixed_top_b_2").css({
+                                    position: "fixed",
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    'z-index': 10000,
+                                });
+                            } else {
+                                $("#menu_fixed_top_b_2").css({
+                                    position: "initial",
+                                });
+                            }
+                        });
+                    });
+                </script>
+
+                <section id="menu_fixed_top_b_2" class="section_menu hidden-sm hidden-xs">
+                    <div class="container content" id="menu_top">
+
+                        <section class="menu_wrap type_2 relative clearfix t_xs_align_c" style="">
+                            <!--main menu-->
+
+                            <nav role="navigation" id="navigation33" class="f_left f_xs_none d_xs_none t_xs_align_l">
+
+                                <ul class=" main_menu clearfix">
+
+
+                                    <li class="parentMenu relative f_xs_none m_xs_bottom_5"><a href="index.html" class="tr_delay_hover color_light tt_uppercase menu_item">Trang chủ</a></li>
+                                    <li class="parentMenu relative f_xs_none m_xs_bottom_5">
+                                        <a href="#" class="tr_delay_hover color_light tt_uppercase menu_item">Sản phẩm</a>
+
+                                        <div style="min-width:560px" class="sub_menu_wrap  d_xs_none tr_all_hover clearfix r_corners w_xs_auto">
+                                            <div class="f_left m_left_10 m_xs_left_0 f_xs_none">
+
+                                                <b style="font-size: 14px;" class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b"><a class="menu_item" href="danh-muc/dien-thoai.html">Điện thoại</a></b>
+
+                                                <ul class="sub_menu">
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="danh-muc/dien-thoai.html">Submenu 1</a></li>
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="danh-muc/dien-thoai.html">Submenu 2</a></li>
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 4</a></li>
+
+                                                </ul>
+
+                                            </div>
+                                            <div class="f_left m_left_10 m_xs_left_0 f_xs_none">
+
+                                                <b style="font-size: 14px;" class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b"><a class="menu_item" href="danh-muc/loa-tai-nghe.html">Loa - tai nghe</a></b>
+
+                                                <ul class="sub_menu">
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 1</a></li>
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 2</a></li>
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 3</a></li>
+
+                                                </ul>
+
+                                            </div>
+                                            <div class="f_left m_left_10 m_xs_left_0 f_xs_none">
+
+                                                <b style="font-size: 14px;" class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b"><a class="menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 5</a></b>
+
+                                                <ul class="sub_menu">
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 7</a></li>
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 8</a></li>
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 9</a></li>
+
+                                                </ul>
+
+                                            </div>
+                                            <div class="f_left m_left_10 m_xs_left_0 f_xs_none">
+
+                                                <b style="font-size: 14px;" class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b"><a class="menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 6</a></b>
+
+                                                <ul class="sub_menu">
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 10</a></li>
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 11</a></li>
+                                                    <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 12</a></li>
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+
+
+                                    </li>
+                                    <li class="parentMenu relative f_xs_none m_xs_bottom_5">
+                                        <a href="#" class="tr_delay_hover color_light tt_uppercase menu_item">Hướng dẫn</a>												    												     												     		<div class="sub_menu_wrap top_arrow_2 d_xs_none type_2 tr_all_hover clearfix r_corners">
+                                            <ul class="sub_menu">
+                                                <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 1</a></li>
+                                                <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 2</a></li>
+                                                <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 3</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li class="parentMenu relative f_xs_none m_xs_bottom_5">
+                                        <a href="#" class="tr_delay_hover color_light tt_uppercase menu_item">Khuyến mãi</a>												    												     												     		<div class="sub_menu_wrap top_arrow_2 d_xs_none type_2 tr_all_hover clearfix r_corners">
+                                            <ul class="sub_menu">
+                                                <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 4</a></li>
+                                                <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 5</a></li>
+                                                <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 6</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li class="parentMenu relative f_xs_none m_xs_bottom_5">
+                                        <a href="#" class="tr_delay_hover color_light tt_uppercase menu_item">Tin tức</a>												    												     												     		<div class="sub_menu_wrap top_arrow_2 d_xs_none type_2 tr_all_hover clearfix r_corners">
+                                            <ul class="sub_menu">
+                                                <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 7</a></li>
+                                                <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 8</a></li>
+                                                <li><a class="color_dark tr_delay_hover menu_item" href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 9</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li class="parentMenu relative f_xs_none m_xs_bottom_5"><a href="https://dienthoai2.jweb.vn/lien-he" class="tr_delay_hover color_light tt_uppercase menu_item">Liên hệ</a></li>																		<!-- edit-me -->
+                                    <!-- ./edit-me -->
+                                </ul>
+                            </nav>
+                        </section>
+
+                    </div>
+                </section> <!--end section menu-->
+                <!--end sang test menu-->
+
+            </header>
+
+            <!--tren - only homepage-->
+            <!--content-->
+            <div class="page_content_offset_sang">
+
+                <div class="container content">
+                    @RenderBody()
+                  
+                </div>
+
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+        </div><!--end content_wrap-->
+    </div>
+    <!--/wide_layout-->
+    <!--markup footer-->
+    <!--  -->
+    <!--footer full page-->
+
+    <footer id="footer" class="type_2">
+
+
+        <div class="container">
+            <!--Mang xa hoi-->
+
+            <div class="menu">
+                <a href="index.html" class="home">Trang chủ</a>
+                <a href="#top" title="Đầu trang" class="top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Lên đầu trang</a>
+                <div class="clearfix"></div>
+            </div>
+            <div class="footer_top_part">
+
+                <div class="container">
+
+                    <div class="clearfix">
+
+                        <section id="footer_html" class="col-sm-12" style="">
+                            <div class="row" style="color: #bdc3c7;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 box_footer" style="color: #bdc3c7;">
+                                    <div id="text-2" class="widget widget_text">
+                                        <h3><span style="color: #000000;">TH&Ocirc;NG TIN CHUNG</span></h3>
+                                        <div class="textwidget">
+                                            <p style="color: #fff;"><span style="color: #000000;">Giới thiệu</span></p>
+                                            <p style="color: #fff;"><span style="color: #000000;">Ch&iacute;nh s&aacute;ch bảo h&agrave;nh v&agrave; đối trả</span></p>
+                                            <p><span style="color: #000000;">Tư vấn lựa chọn sản phẩm</span></p>
+                                            <p style="color: #fff;"><span style="color: #000000;">Giao h&agrave;ng v&agrave;&nbsp;thanh to&aacute;n</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="color: #bdc3c7;">
+                                    <div id="nav_menu-3" class="widget widget_nav_menu">
+                                        <h3 style="color: #bdc3c7;"><span style="color: #000000;">SẢN PHẨM</span></h3>
+                                        <p><span style="color: #000000;">Danh mục 1</span></p>
+                                        <p style="color: #bdc3c7;"><span style="color: #000000;">Danh mục 2</span></p>
+                                        <p style="color: #bdc3c7;"><span style="color: #000000;">Danh mục 3</span></p>
+                                        <p style="color: #bdc3c7;"><span style="color: #000000;">Danh mục 4</span></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="color: #bdc3c7;">
+                                    <h3><span style="color: #000000;">TIN TỨC</span></h3>
+                                    <p><span style="color: #000000;">C&ocirc;ng nghệ l&agrave;m đẹp</span></p>
+                                    <p><span style="color: #000000;">Tuyển dụng</span></p>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="color: #bdc3c7;">
+                                    <h3 style="color: #bdc3c7;"><span style="color: #000000;">LI&Ecirc;N KẾT WEBSITE</span></h3>
+                                    <p style="color: #bdc3c7;"><span style="color: #000000;"><a style="color: #000000;" href="http://congnghe123.com/">C&ocirc;ng nghệ 123</a></span></p>
+                                    <p><span style="color: #000000;">Đăng k&iacute; mua&nbsp;</span><span style="color: #bdc3c7;">&nbsp; </span></p>
+                                    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; C&ocirc;ng ty TNHH GARENA Li&ecirc;n Qu&acirc;n</strong></p>
+                                </div>
+                                <div class="col-sm-12 text-center" style="color: #bdc3c7;">
+                                    <p style="color: #bdc3c7;"><span style="color: #000000;">Địa chỉ: Vũ Tiến - Vũ Thư - Th&aacute;i B&igrave;nh</span></p>
+                                    <p style="color: #bdc3c7;"><span style="color: #000000;">Uy T&iacute;n Chất Lượng</span></p>
+                                    <p style="color: #bdc3c7;"><span style="color: #000000;">Website: <u><a style="color: #000000;" href="https://dienthoai2.jweb.vn/">https://weblienquan.jweb.vn</a></u>&nbsp;- Email: kemxoi1245@gmail.com</span></p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--copy right-->
+
+
+        <div style="background-color: #696969;padding: 10px 0;">
+            <div class="container">
+                <p style="color: #ebebeb !important;margin: 0; padding: 0;font-size: 12px;text-align: center;" class="text-left col-md-12">
+                    © Được cung cấp bởi <a style="color: #ebebeb !important;margin: 0; padding: 0;font-size: 12px;text-align: center;" title="Được cung cấp bởi" target="_blank" href="https://jweb.vn/">Jweb.vn</a>
+                </p>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    </footer>
+
+
+    <!--login popup-->
+
+    <div class="popup_wrap d_none" id="login_popup">
+
+        <section class="popup r_corners shadow">
+
+            <button class="bg_tr color_dark tr_all_hover text_cs_hover close f_size_large"><i class="fa fa-times"></i></button>
+
+            <div class="m_bottom_20 color_dark">Đăng nhập tài khoản</div>
+
+            <form>
+
+                <ul>
+
+                    <li class="m_bottom_15">
+
+                        <label for="username" class="m_bottom_5 d_inline_b">Tên đăng nhập</label><br>
+
+                        <input type="text" name="" id="username" class="r_corners full_width">
+
+                    </li>
+
+                    <li class="m_bottom_25">
+
+                        <label for="password" class="m_bottom_5 d_inline_b">Mật khẩu</label><br>
+
+                        <input type="password" name="" id="password" class="r_corners full_width">
+
+                    </li>
+
+                    <li class="m_bottom_15">
+
+                        <input type="checkbox" class="d_none" id="checkbox_10"><label for="checkbox_10">Ghi nhớ</label>
+
+                    </li>
+
+                    <li class="clearfix m_bottom_30">
+
+                        <button class="button_type_4 tr_all_hover r_corners f_left bg_scheme_color color_light f_mxs_none m_mxs_bottom_15">Đăng nhập</button>
+
+                        <div class="f_right f_size_medium f_mxs_none">
+
+                            <a href="#" class="color_dark">Quên mật khẩu?</a><br>
+
+                            <a href="#" class="color_dark">Quên tên đăng nhập?</a>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </form>
+
+            <footer class="bg_light_color_1 t_mxs_align_c">
+
+                <div class="color_dark d_inline_middle d_mxs_block m_mxs_bottom_15">Chưa có tài khoản?</div>
+
+                <a href="#" role="button" class="tr_all_hover r_corners button_type_4 bg_dark_color bg_cs_hover color_light d_inline_middle m_mxs_left_0">Đăng ký</a>
+
+            </footer>
+
+        </section>
+
+    </div>
+    <!--cart popup-->
+    <div class="popup_wrap d_none" id="cart_popup">
+
+        <section class="popup popup_cart r_corners shadow">
+
+            <button class="bg_tr color_dark tr_all_hover text_cs_hover close f_size_large"><i style="font-size: 25px;" class="fa fa-times"></i></button>
+
+
+            <div class="title_relate_post m_bottom_20 color_dark">Đã thêm vào giỏ hàng</div>
+            <div class="col-sm-12">
+                <a style="width:300px; height:40px; font-size: large" href="gio-hang.html" class="btn btn-success ">Xem giỏ hàng</a>
+            </div>
+
+        </section>
+
+    </div>
+    <div class="popup_wrap d_none" id="cart_popup_mobile">
+        <section class="popup popup_cart_mobile r_corners shadow">
+            <button class="bg_tr color_dark tr_all_hover text_cs_hover close f_size_large"><i style="font-size: 35px;" class="fa fa-times"></i></button>
+            <div class="title_relate_post m_bottom_20 color_dark">Đã thêm vào giỏ hàng</div>
+            <div class="col-sm-12">
+                <a href="dat-hang.html" style="margin-left: 10px; width: 300px" class="button_type_12 r_corners bg_scheme_color color_light tr_delay_hover d_inline_b f_size_large ">Đặt hàng và Thanh toán</a>
+            </div>
+        </section>
+    </div>
+    <button class="t_align_c r_corners type_2 tr_all_hover animate_ftl" id="go_to_top"><i class="fa fa-angle-up"></i></button>
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi|Pattaya" rel="stylesheet">
+
+    <!--scripts include-->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.flexslider-min.js"></script>
+    <script src="~/Scripts/elevatezoom.min.js"></script>
+    <script src="~/Scripts/waypoints.min.js"></script>
+    <script src="~/Scripts/jquery.isotope.min.js"></script>
+    <script src="~/Scripts/scripts.min.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/unserialize.jquery.latest.js"></script>
+    <script src="~/Scripts/jquery.mobilemenu.js" type="text/javascript"></script>
+    <script src="~/Scripts/platform.js" async defer>{lang: 'vi'}</script>
+    <script>
+        $('body').click(function (e) {
+
+            $(".popup_wrap").css({ "display": "none" });
+
+        });
+        var widthScreen = $(window).width();
+        if (widthScreen < 600) {
+            $('#sidebar-l').removeClass('sidebar-l').addClass('sidebar-r');
+        }</script>
+    <script type="text/javascript">
+        $(function () {
+            var menu = $.mobilemenu({
+                menuOpenObject: $('#menu_button_mobile'),
+                body: '<form action="timkiem.html"><div class="search input-group"><input type="text" class="form-control" placeholder="Nhập nội dung"  name="s"/><div class="input-group-btn"><button type="submit" class="btn btn-default">Tìm</button></div></div></form><ul><li><a href="/">Trang chủ</a></li><li><a href="#">Sản phẩm</a><ul><li><a href="/danh-muc/dien-thoai.html">Điện thoại</a><ul><li><a href="/danh-muc/dien-thoai.html">Submenu 1</a></li><li><a href="/danh-muc/dien-thoai.html">Submenu 2</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 4</a></li></ul></li><li><a href="/danh-muc/loa-tai-nghe.html">Loa - tai nghe</a><ul><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 1</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 2</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 3</a></li></ul></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 5</a><ul><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 7</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 8</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 9</a></li></ul></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 6</a><ul><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 10</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 11</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 12</a></li></ul></li></ul></li><li><a href="#">Hướng dẫn</a><ul><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 1</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 2</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 3</a></li></ul></li><li><a href="#">Khuyến mãi</a><ul><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 4</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 5</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 6</a></li></ul></li><li><a href="#">Tin tức</a><ul><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 7</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 8</a></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Tiêu đề menu 9</a></li></ul></li><li><a href="https://dienthoai2.jweb.vn/lien-he">Liên hệ</a></li></ul>'
+            });
+        });</script>
+    <script type="text/javascript" src="~/Scripts/unserialize.jquery.latest.js"></script>
+    <!--phone scroll-->
+    <!--thẻ tiếp thị lại-->
 </body>
 </html>
